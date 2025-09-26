@@ -43,13 +43,13 @@ public class Cancion {
 
     @PrePersist
     protected void onCreate(){
-        this.fechaCreacion = new Date(0);
+        this.fechaCreacion = new Date();
         this.fechaActualizacion = this.fechaCreacion;
     }
 
     @PreUpdate
     protected void onUpdate(){
-        this.fechaActualizacion = new Date(0);
+        this.fechaActualizacion = new Date();
     }
 
     public Long getId() {
